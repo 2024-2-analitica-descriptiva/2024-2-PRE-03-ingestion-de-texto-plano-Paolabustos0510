@@ -1,9 +1,11 @@
 import pandas as pd
 import re
+import os
 
 def pregunta_01():
     # Leer el archivo línea por línea
-    with open(r"C:\Users\Olga\Documents\GitHub\2024-2-PRE-03-ingestion-de-texto-plano-Paolabustos0510\files\input\clusters_report.txt", 'r') as file:
+    #with open(r"C:\Users\Olga\Documents\GitHub\2024-2-PRE-03-ingestion-de-texto-plano-Paolabustos0510\files\input\clusters_report.txt", 'r') as file:
+    with open(os.path.join(os.path.dirname(__file__),"../files/input/clusters_report.txt"), 'r') as file:
         lines = file.readlines()
 
         # Limpiar y agrupar las líneas para cada fila del DataFrame
